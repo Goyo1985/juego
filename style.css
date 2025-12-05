@@ -1,0 +1,59 @@
+:root {
+  --bg: #0f172a;
+  --card: #111827;
+  --text: #e5e7eb;
+  --accent: #22c55e;
+  --warn: #f59e0b;
+  --bad: #ef4444;
+  --muted: #94a3b8;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: linear-gradient(180deg, #0b1023 0%, #0f172a 100%);
+  color: var(--text);
+}
+header, footer { padding: 16px 24px; background: rgba(255,255,255,0.04); }
+header h1 { margin: 0 0 6px; }
+header p { color: var(--muted); margin: 0; }
+main { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding: 20px; }
+.indicators {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
+  background: rgba(255,255,255,0.04); padding: 12px; border-radius: 10px;
+}
+.indicators div {
+  background: var(--card); padding: 10px; border-radius: 8px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+#scene {
+  grid-column: 1 / -1; background: var(--card); padding: 20px; border-radius: 12px;
+}
+#title { margin-top: 0; }
+#narrative { color: var(--muted); }
+#concepts { display: flex; gap: 10px; padding: 0; margin: 10px 0 20px; list-style: none; }
+#concepts li {
+  background: rgba(34, 197, 94, 0.15); border: 1px solid rgba(34, 197, 94, 0.35);
+  padding: 6px 10px; border-radius: 20px; font-size: 14px;
+}
+#choices { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+.choice {
+  background: #1f2937; border: 1px solid #374151; padding: 12px; border-radius: 10px;
+}
+.choice button {
+  width: 100%; padding: 10px; background: #2563eb; color: #fff; border: none;
+  border-radius: 8px; cursor: pointer; font-weight: 600;
+}
+.choice button:hover { background: #1d4ed8; }
+.log { background: rgba(255,255,255,0.04); padding: 12px; border-radius: 10px; }
+#log { margin: 0; padding-left: 18px; }
+footer { display: flex; justify-content: flex-end; }
+#restart {
+  background: transparent; border: 1px solid #475569; color: var(--text);
+  padding: 10px 14px; border-radius: 8px; cursor: pointer;
+}
+#restart:hover { border-color: #93c5fd; }
+.bad { color: var(--bad); }
+.warn { color: var(--warn); }
+.good { color: var(--accent); }
+@media (max-width: 900px) { main { grid-template-columns: 1fr; } #choices { grid-template-columns: 1fr; } }

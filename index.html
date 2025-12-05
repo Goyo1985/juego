@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Simulador de Crisis Económica – Prosperitia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Prosperitia: Simulador de Crisis Económica</h1>
+    <p>Eres el Ministro de Economía. Cada decisión altera el rumbo del país.</p>
+  </header>
+
+  <main>
+    <section class="indicators">
+      <div><span>Inflación:</span> <strong id="inflacion">50%</strong></div>
+      <div><span>Desempleo:</span> <strong id="desempleo">8%</strong></div>
+      <div><span>Déficit fiscal:</span> <strong id="deficit">4%</strong></div>
+      <div><span>Confianza:</span> <strong id="confianza">30</strong></div>
+      <div><span>Reservas:</span> <strong id="reservas">60</strong></div>
+      <div><span>Energía:</span> <strong id="energia">40</strong></div>
+    </section>
+
+    <section id="scene">
+      <!-- Título y narrativa -->
+      <h2 id="title"></h2>
+      <p id="narrative"></p>
+
+      <!-- Conceptos visibles -->
+      <ul id="concepts"></ul>
+
+      <!-- Opciones de decisión -->
+      <div id="choices"></div>
+    </section>
+
+    <section class="log">
+      <h3>Registro de decisiones</h3>
+      <ol id="log"></ol>
+    </section>
+  </main>
+
+  <footer>
+    <button id="restart">Reiniciar simulación</button>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
